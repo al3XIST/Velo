@@ -1,0 +1,324 @@
+/* Police d'écriture */
+body, html{
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+body {
+   line-height: 1.4;
+    background-image: linear-gradient(180deg, #fafafa, #c3c3c3);
+}
+/* Header */
+
+.navBarre{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    box-shadow: 0px 15px 35px #3232321a,0 5px 15px #0000001a;
+    background-color: white;
+}
+.navBarre .logo{
+    width: 8%;
+    position: relative;
+    left: 50px;
+}
+#navP{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    list-style: none; 
+    padding-top: 5px;
+    padding-right: 50px;
+}
+a {
+    color: #ff1e70;
+    padding-right: 40px;
+}
+a:hover{
+    color: #b9134b;
+    text-decoration: none;
+
+}
+.item{
+    margin: 40px 10px;
+    background-color: #fff;
+    transition: transform 0.3s;
+    transform: translate3d(0, -1px, 0);
+    margin: 50px;
+}
+.item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.item:hover {
+    transform: translate3d(0, -10px, 0);
+}
+/**
+
+CAROUSEL
+
+*/
+.container{
+    overflow: hidden;
+    max-width: 100%;
+}
+#carousel1{
+    padding: 25px;
+}
+.carousel {
+    position: relative;
+    margin : auto;
+}
+.carousel__container{
+    transition: transform 0.3s;
+    transform: translate3d(0, 0, 0);
+}
+.carousel__container::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.carousel__item {
+    float : left;
+}
+.carousel__item .item{
+    box-shadow: 0px 15px 35px #3232321a,0 5px 15px #0000001a;
+}
+
+.carousel__next, .carousel__prev {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #ff1e70 url(next.png) center center no-repeat;
+    background-size: 10px 20px;
+    border-radius: 50%;
+    top: 44%;
+    margin-top: -20px;
+    right: -20px;
+    border: 2px solid white;
+    box-shadow: 0px 0px 9px #919191;
+    cursor: pointer;
+    transition: transform 0.3s;
+    display: block;
+}
+.carousel__next2, .carousel__prev2 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #ff1e70 url(next.png) center center no-repeat;
+    background-size: 10px 20px;
+    border-radius: 50%;
+    top: 44%;
+    margin-top: -20px;
+    right: -20px;
+    box-shadow: 0px 15px 35px #3232321a,0 5px 15px #0000001a;
+    cursor: pointer;
+    transition: transform 0.3s;
+    display: none;
+}
+.carousel__prev, .carousel__prev2{
+    width:40px;
+    height: 40px;
+    background: #ff1e70 url(back.png) center center no-repeat;
+    background-size: 10px 20px;
+    left: -20px;
+    right: auto;
+}
+.carousel__next:hover, .carousel__prev:hover {
+    transform: scale(1.2);
+}
+.carousel__pause{
+    position: relative;
+    left: 46%;
+    width: 40px;
+    height: 40px;
+    background: #FFF url(pause.svg) center center no-repeat;
+    background-size: 12px 12px;
+    border: 2px solid #ff1e70;
+    border-radius: 50%;
+    box-shadow: 0px 0px 9px #6d6d6d;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.carousel__play{
+    position: relative;
+    bottom: 39px;
+    left: 51%;
+    width: 40px;
+    height: 40px;
+    background: #FFF url(play.svg) center center no-repeat;
+    background-size: 14px 14px;
+    border: 2px solid #ff1e70;
+    border-radius: 50%;
+    box-shadow: 0px 0px 9px #6d6d6d;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.carousel__play:hover, .carousel__pause:hover {
+    transform: scale(1.2);
+}
+
+/**
+
+MAP
+
+*/
+
+#map{
+    width: 70%;
+    height: 550px;
+    margin-top: 50px;
+    margin-left: 95px;
+    margin-bottom: 25px;
+    z-index: 10;
+    box-shadow: 0px 15px 35px #3232321a,0 5px 15px #0000001a;
+}
+.marker {
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#boiteStation{
+    display: flex;
+    flex-direction: column;
+}
+#infoStation{
+    flex: none;
+    margin-top: 50px;
+    margin-left: 25px;
+    width: 80%;
+    height: 260px;
+    background-image: linear-gradient(180deg, #FFF, #D4D4D4);
+    box-shadow: 0px 15px 35px #3232321a,0 5px 15px #0000001a;
+}
+#infoStation2{
+    flex: none;
+    position: relative;
+    bottom: 35px;
+    margin-top: 50px;
+    margin-left: 25px;
+    width: 80%;
+    height: 275px;
+    background-image: linear-gradient(180deg, #FFF, #D4D4D4);
+    box-shadow: 0px 15px 35px #3232321a,0 5px 15px #0000001a;
+}
+#infoListe label{
+    padding-bottom: 10px;
+}
+article{
+    display: flex;
+    margin-top: 50px;
+    height: 650px;
+    background: rgba(255,30,120,0.5) ;
+    background-image: url("../images/Toulouse.jpg");
+    box-shadow: 0px -5px 35px #3232321a,0px -5px 35px #0000001a;
+}
+#details{
+    font-size: 25px;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    color: #ff1e70;
+}
+#sign{
+    font-size: 25px;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 40px;
+    color: #ff1e70;
+}
+#infoStation span{
+    color: #ff1e70;
+}
+h3{
+    font-size: 20px;
+    color: #ff1e70;
+    padding-bottom: 20px;
+    position: relative;
+    top: 20px;
+    text-align: center;
+}
+#reserv{
+    display: none;
+}
+#name{
+    margin-bottom: 15px;
+    padding-left: 4px;
+}
+#prenom{
+    padding-left: 4px;
+}
+#confirm{
+    margin-top: 25px;
+    background: #ff1e70;
+    border-radius: 5px;
+    padding: 8px;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.5s;
+}
+#confirm:hover{
+    transform: scale(1.15);
+    box-shadow: 0px 0px 5px #e62586;
+}
+#canvasRes{
+    display: none;
+    position: relative;
+    text-align: center;
+    bottom: 35px;
+}
+#canvasText{
+   position: relative;
+    top: 25px;
+}
+#canvasRes p {
+    font-size: 13px;
+    position: relative;
+    bottom: 45px;
+}
+#signature{
+    position: relative;
+    bottom: 25px;
+    box-shadow: 0px 0px 15px #0000001a;
+    border: 2px solid #ff1e70;
+    border-radius: 2%;
+    background: white;
+}
+#resConf, #annuler, #effacer{
+    background: #ff1e70;
+    border-radius: 5px;
+    position: relative;
+    margin: 5px;
+    bottom: 18px;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.5s;
+}
+#boiteReserv{
+    display: none;
+    height: 400px;
+    text-align: center;
+    background: white;
+}
+#boiteReserv h2{
+    padding-top: 35px;
+    font-size: 44px;
+}
+#item_reserv{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: white;
+}
+#resStat, #resPre, #resNom{
+    color: #ff1e70;
+}
